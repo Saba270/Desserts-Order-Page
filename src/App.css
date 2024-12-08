@@ -1,7 +1,98 @@
-.dessert{
-  background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Red Hat Text", sans-serif;
+  transition: 0.2s;
 }
 
-img{
-  width: 400px;
+body {
+  padding: 7vw;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+}
+
+.dessert-listings {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+
+.dessert {
+  background-color: aqua;
+  min-width: 5vh;
+  max-width: 35vh;
+}
+
+img {
+  width: 100%;
+}
+
+.dessert-btn {
+  position: absolute;
+  width: 60%;
+  z-index: 1;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 60em;
+  outline: none;
+}
+
+.add-to-cart-btn {
+  background-color: #FFF;
+  color: #260F08;
+  border: 0.1em solid #AD8A85;
+  padding: 0.7rem 1.5rem;
+}
+
+.add-to-cart-btn:hover {
+  color: #C73B0F;
+  border-color: #C73B0F;
+}
+
+.add-to-cart-btn button {
+  display: flex;
+  align-items: center;
+}
+
+.change-amount-btn {
+  background-color: #C73B0F;
+  color: #FFF;
+}
+
+.change-amount-btn svg {
+  height: 0.5lh;
+  width: 0.5lh;
+  padding: 0.2rem;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+}
+
+.change-amount-btn svg:hover path {
+  fill: #C73B0F;
+}
+
+.change-amount-btn button{
+  border-radius: 50%;
+}
+
+.change-amount-btn button:hover {
+  background-color: #FFF;
 }

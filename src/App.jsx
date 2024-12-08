@@ -10,14 +10,24 @@ function App() {
     return { ...dessert, quantity: 0 }
   }))
 
+  const changeQuantity = (dessert, changeAmount) => {
+    dessert.quantity += changeAmount;
+    const newList = dessertsData.filter((currentDessert) => {
+      if (dessert === currentDessert) return { ...dessert, quantity: dessert.quantity + changeAmount }
+      else return currentDessert
+    })
+    console.log(newList)
+    setDessertsData(newList)
+  }
+
 
   return (
     <>
       <section className='desserts-list-section'>
         <h1>Desserts</h1>
-        <div>{dessertsData.map((currentDessert) => {
+        <div className='dessert-listings'>{dessertsData.map((currentDessert) => {
           console.log(currentDessert)
-          return <Dessert dessert={currentDessert} changeData={setDessertsData} Data={dessertsData}/>
+          return <Dessert dessert={currentDessert} changeQuantity={changeQuantity} />
         })}</div>
       </section>
       <section>
