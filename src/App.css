@@ -53,8 +53,8 @@ svg {
 .dessert-listings {
   margin-top: 2rem;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid; 
+  grid-template-columns: auto auto auto;
   gap: 5vh;
   justify-content: space-between;
 }
@@ -299,7 +299,7 @@ img {
   }
 
   .desserts-list-section{
-    width: 86vw;
+    width: 100%;
   }
 
   .dessert-listings{
@@ -324,16 +324,11 @@ img {
     margin-top: 2rem;
     width: 100%;
   }
-
-  .dessert{
-    max-width: 30%;
-  }
 }
 
 @media (max-width: 375px){
   .dessert-listings{
-    flex-wrap: nowrap;
-    flex-direction: column;
+    grid-template-columns: 100%;
     gap: 6vh;
   }
 
