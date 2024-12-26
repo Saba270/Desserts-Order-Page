@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import { AddToCart, CarbonNeutral, DecrementQuantity, IncrementQuantity, OrderConfirmed, RemoveItem, EmptyCart } from './components/Icons'
 import Dessert from './components/Dessert'
 import desserts from './data.json'
 import { use } from 'react'
+import Cart from './components/Cart'
 
 function App() {
   const [dessertsData, setDessertsData] = useState(desserts.map((dessert) => {
@@ -23,16 +23,19 @@ function App() {
 
   return (
     <>
-      <section className='desserts-list-section'>
-        <h1>Desserts</h1>
-        <div className='dessert-listings'>{dessertsData.map((currentDessert) => {
-          console.log(currentDessert)
-          return <Dessert dessert={currentDessert} changeQuantity={changeQuantity} />
-        })}</div>
+      <section className='outer-wrapper'>
+        <section className='desserts-list-section'>
+          <h1>Desserts</h1>
+          <div className='dessert-listings'>
+            {dessertsData.map((currentDessert) => {
+              return <Dessert dessert={currentDessert} changeQuantity={changeQuantity} />
+            })}</div>
+        </section>
+        <section className='cart-section'>
+          <Cart desserts={dessertsData} changeQuantity={changeQuantity}/>
+        </section>
       </section>
-      <section>
-        
-      </section>
+
     </>
   )
 }
