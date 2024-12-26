@@ -26,7 +26,7 @@ body {
 }
 
 .desserts-list-section {
-  max-width: 70%;
+  max-width: 65%;
 }
 
 .cart-section {
@@ -56,11 +56,12 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 5vh;
+  justify-content: space-between;
 }
 
 .dessert {
   min-width: 5vh;
-  max-width: 35vh;
+  max-width: 34.25vh;
 }
 
 .selected {
@@ -290,4 +291,41 @@ img {
 
 .confirm-order-btn:hover{
   filter: brightness(0.9);
+}
+
+@media (max-width: 768px){
+  .outer-wrapper{
+    flex-direction: column;
+  }
+
+  .desserts-list-section{
+    width: 86vw;
+  }
+
+  .dessert-listings{
+    gap: 3vh;
+    width: 86vw;
+  }
+
+  .dessert{
+    font-size: 0.9rem;
+  }
+
+  .dessert-btn{
+    width: 80%;
+    height: 2.7rem;
+  }
+
+  .item-quantity{
+    font-size: 0.8rem;
+  }
+
+  .cart-section{
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .dessert{
+    max-width: 30%;
+  }
 }

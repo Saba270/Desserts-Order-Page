@@ -29,10 +29,11 @@ function App() {
           <div className='dessert-listings'>
             {dessertsData.map((currentDessert) => {
               return <Dessert dessert={currentDessert} changeQuantity={changeQuantity} />
-            })}</div>
+            })}
+          </div>
         </section>
         <section className='cart-section'>
-          <Cart desserts={dessertsData} changeQuantity={changeQuantity}/>
+          <Cart desserts={dessertsData} changeQuantity={changeQuantity} />
         </section>
       </section>
 
