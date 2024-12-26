@@ -329,3 +329,23 @@ img {
     max-width: 30%;
   }
 }
+
+@media (max-width: 375px){
+  .dessert-listings{
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 6vh;
+  }
+
+  .dessert{
+    max-width: 86vw;
+  }
+
+  .dessert-btn{
+    width: 50%;
+  }
+
+  .cart{
+    font-size: 0.8rem;
+  }
+}
