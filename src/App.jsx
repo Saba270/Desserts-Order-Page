@@ -33,8 +33,9 @@ function App() {
             })}
           </div>
         </section>
-        <section className='cart-section'>
-          <Cart desserts={dessertsData} changeQuantity={changeQuantity} /> /*Cart კომპონენტს ვაწვდი საჭირო ინფორმაციას და ვარენდერებ */
+        <section className='cart-section'> 
+          {/*Cart კომპონენტს ვაწვდი საჭირო ინფორმაციას და ვარენდერებ */}
+          <Cart desserts={dessertsData} changeQuantity={changeQuantity} />
         </section>
       </section>
 

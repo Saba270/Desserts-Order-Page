@@ -14,8 +14,8 @@ const Cart = ({ desserts, changeQuantity }) => {
     return (
         <div className="cart">
             <h2>Your Cart ({cartItems.length})</h2>
-            /*თუ cartItems სია ცარიელია მაშინ გამომაქვს ცარიელი ურიკა */
-            {cartItems.length === 0 ? <section className='empty-cart'>
+{            /*თუ cartItems სია ცარიელია მაშინ გამომაქვს ცარიელი ურიკა */
+}            {cartItems.length === 0 ? <section className='empty-cart'>
                 <EmptyCart />
                 <p>Your added items will apper here</p>
             </section>
@@ -38,7 +38,7 @@ const Cart = ({ desserts, changeQuantity }) => {
                         </ul>
                     </section>
                     <section className="final-order-section">
-                        <p>Order Total <span>${finalPrice.toFixed(2)}</span></p> /*გამომაქვს საბოლოო ფასი მეასედამდე სიზუსტით */
+                        <p>Order Total <span>${finalPrice.toFixed(2)}</span></p> {/*გამომაქვს საბოლოო ფასი მეასედამდე სიზუსტით */}
                         <figure>
                             <p><CarbonNeutral />&nbsp;  This is a &nbsp;<b> carbon-neutral</b> &nbsp;delivery</p>
                         </figure>
