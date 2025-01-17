@@ -6,7 +6,7 @@ const Dessert = ({ dessert, changeQuantity }) => {
     return (
         <div className="dessert">
             <picture> {/*ეკრანის სხვადასხვა ზომებისთვის ვცვლი დესერტის ფოტოს */}
-                <source media="(max-width: 375px) and (orientation: portrait)" srcset={baseURL + dessert.images.mobile} />
+                <source media="(max-width: 425px) and (orientation: portrait)" srcset={baseURL + dessert.images.mobile} />
                 <source media="(max-width: 768px) and (orientation: portrait)" srcset={baseURL + dessert.images.tablet} />
                 <img className={`${dessert.quantity > 0 ? "selected" : ""}`} src={baseURL + dessert.images.desktop} alt="dessert-image" />
 

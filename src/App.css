@@ -326,7 +326,7 @@ img {
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 425px){
   .dessert-listings{
     grid-template-columns: 100%;
     gap: 6vh;
